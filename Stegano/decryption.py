@@ -12,7 +12,7 @@ cipher = list()
 def int_to_ascii(int_list) :
     for i in int_list:
         cipher.append(chr(i))
-    print (cipher)
+    return cipher
 
 
 def green_pixel(l,m,n): # function call of green pixel value 
@@ -27,7 +27,7 @@ def green_pixel(l,m,n): # function call of green pixel value
     #print(int_pxl)
     #img[l,m,n]=int_pxl
 
-def red_pixel(l,m,n):
+def blue_pixel(l,m,n):
 
     red_pxl_of_img = img[l,m,n]
     bin_pxl = int_to_bin.method(red_pxl_of_img)
@@ -66,7 +66,7 @@ def red_pxl():
                 if (bin_of_red_pxl[7]==0):
                     green_pixel(l,m,n+1)
                 elif (bin_of_red_pxl[7]==1):
-                    red_pixel(l,m,n+2)
+                    blue_pixel(l,m,n+2)
     
     return bin_data_list      
         
